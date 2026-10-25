@@ -1,7 +1,7 @@
 /* Editá esta lista: [materia, título, descripción, autores, enlace, imagen (opcional)]
    Para la miniatura poné la ruta de la imagen en el último campo, por ejemplo "img/arte.jpg". */
 const P=[
-["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","https://codepen.io/editor/Mariano-Villares/pen/01a057e1-db92-79e3-9b60-39e40cd4ea37","./EnergyIntelligenceNetwork.png"],
+["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./EIN/index.html","./thumbnails/EnergyIntelligenceNetwork.png"],
 ["Recipes","Del Renacimiento al Barroco","Las obras y los artistas que cambiaron la forma de mirar entre los siglos XV y XVII.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Arte latinoamericano del siglo XX","Vanguardias, identidad y militancia en la pintura de América Latina.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Muralismo mexicano","Rivera, Orozco y Siqueiros: el arte que salió a la calle.","Nombre Apellido, Nombre Apellido","#",""],

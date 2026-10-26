@@ -2,7 +2,7 @@
    Para la miniatura poné la ruta de la imagen en el último campo, por ejemplo "img/arte.jpg". */
 const P=[
 ["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EnergyIntelligenceNetwork.png"],
-["Recipes","Del Renacimiento al Barroco","Las obras y los artistas que cambiaron la forma de mirar entre los siglos XV y XVII.","Nombre Apellido, Nombre Apellido","#",""],
+["Recipes","Mimi Cooks","Here you'll find delicious salty and sweet recipes from around the world.","Sofia DiVirgilio, Emilia Petracchi, Milagros Apeceche","./proyects/MimiCooks/index.html","thumbnails/MimiCooks.png"],
 ["Arte","Arte latinoamericano del siglo XX","Vanguardias, identidad y militancia en la pintura de América Latina.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Muralismo mexicano","Rivera, Orozco y Siqueiros: el arte que salió a la calle.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Impresionismo","La luz, el color y el instante, explicados con obras clave.","Nombre Apellido, Nombre Apellido","#",""],

@@ -1,0 +1,20 @@
+html {
+  height: 100%;
+  background: 50% 50% no-repeat
+    url('data:image/svg+xml,<svg viewBox="-20 -5 60 40" width="140" xmlns="http://www.w3.org/2000/svg" opacity="0.2"><path d="M1 8l11-7 11 7v8l-11 7-11-7zm0 0l11 8 11-8m0 8L12 8 1 16M12 1v7m0 8v7" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/><text x="-12" y="32" font-size="5" font-family="monospace" fill="currentColor">Built on CodePen</text></svg>');
+}
+ p{
+  color:green;
+  font-family:times new roman;
+}
+h1{
+  background-color:pink;
+  font-family:Times New Roman;
+  
+}
+ footer{
+  background-color:pink;
+}
+#mybackgroundcolorbox placeholder{
+  font-family:times new roman;
+}

@@ -3,7 +3,7 @@
 const P=[
 ["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EnergyIntelligenceNetwork.png"],
 ["Recipes","Mimi Cooks","Here you'll find delicious salty and sweet recipes from around the world.","Sofia DiVirgilio, Emilia Petracchi, Milagros Apeceche","./proyects/MimiCooks/index.html","thumbnails/MimiCooks.png"],
-["Arte","Arte latinoamericano del siglo XX","Vanguardias, identidad y militancia en la pintura de América Latina.","Nombre Apellido, Nombre Apellido","#",""],
+["Sports","The evolution of football jerseys","This sport's blog wanders over the evolution of football jerseys.","Francisco Oliva, etc","./proyects/FootballJerseys/index.html","thumbnails/FootballJerseys.png"],
 ["Arte","Muralismo mexicano","Rivera, Orozco y Siqueiros: el arte que salió a la calle.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Impresionismo","La luz, el color y el instante, explicados con obras clave.","Nombre Apellido, Nombre Apellido","#",""],
 ["Geografía","Placas tectónicas","Cómo se mueven los continentes y por qué tiembla la Tierra.","Nombre Apellido, Nombre Apellido","#",""],

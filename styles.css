@@ -65,7 +65,7 @@ h2{font-size:clamp(3.5rem,11vw,11rem)}
 .credits .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--pad);align-items:start}
 .credits p.t{font-size:clamp(1.25rem,2vw,1.75rem);max-width:30ch}
 .wm{font-size:17.6vw;line-height:.86;margin-top:clamp(64px,9vw,140px);color:var(--acc);white-space:nowrap}
-.fine{margin-top:32px;font-size:16px;opacity:.85}
+#fine{margin-top:32px;font-size:16px;opacity:.85}
 
 
 @media (max-width:960px){

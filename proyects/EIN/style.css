@@ -1,0 +1,40 @@
+html {
+  font-family:Helvetica;
+  background-color:#616669;
+  color:#F2F3F4;
+}
+
+#invisible{
+  color:grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar{
+  list-style-type: none;
+  margin: 1;
+  padding: 1;
+  overflow: hidden;
+  background-color: grey;
+  text-decoration:none;
+}
+
+#navbar li{
+  float: left;
+}
+
+#navbar a {
+  display: block;
+  text-align: center;
+  padding: 0px ;
+}
+
+.form{
+  background-color:grey;
+}
+
+.petrolcompanylist{
+  background-color: grey;
+}

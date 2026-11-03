@@ -1,40 +1,781 @@
-html {
-  font-family:Helvetica;
-  background-color:#616669;
-  color:#F2F3F4;
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+/* ==========================================================
+   EIN · Energy Intelligence Network
+   Modo oscuro · grises, blanco y verde petróleo
+   ========================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* Grises */
+  --bg: #15191b;
+  --surface: #1d2326;
+  --line: #2d363a;
+  --muted: #8b989e;
+  --text: #c6cfd2;
+
+  /* Blanco */
+  --white: #f4f6f6;
+
+  /* Verde petróleo */
+  --petrol-800: #093a41;
+  --petrol-700: #0c4a53;
+  --petrol-600: #10606b;
+  --petrol-500: #137684;
+  --petrol-400: #2e9099;
+  --petrol-300: #63b9c0;
+  --petrol-100: #c3e4e7;
+
+  /* Tipografía */
+  --font-display: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --measure: 1080px;
 }
 
-#invisible{
-  color:grey;
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--petrol-500);
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--white);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 70ch;
 }
 
 a {
-  text-decoration: none;
+  color: var(--petrol-300);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }
 
-#navbar{
-  list-style-type: none;
-  margin: 1;
-  padding: 1;
-  overflow: hidden;
-  background-color: grey;
-  text-decoration:none;
+a:hover {
+  color: var(--white);
 }
 
-#navbar li{
-  float: left;
+:focus-visible {
+  outline: 2px solid var(--petrol-300);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Navegación ---------- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #navbar a {
   display: block;
+  padding: 1rem 0;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.975rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+#navbar a:hover,
+#navbar a:focus-visible {
+  color: var(--white);
+  border-bottom-color: var(--petrol-400);
+}
+
+#navbar li {
+  list-style: none;
+}
+
+/* Separadores de texto del HTML: no se muestran */
+#invisible {
+  display: none;
+}
+
+/* ---------- Hero ---------- */
+
+#hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+  padding: clamp(2.5rem, 7vw, 5.5rem) var(--gutter);
+  background:
+    /* líneas de profundidad, como capas de perforación */
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 131px,
+      rgba(244, 246, 246, 0.1) 131px 132px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 32px,
+      rgba(244, 246, 246, 0.04) 32px 33px
+    ),
+    linear-gradient(180deg, var(--petrol-700), var(--petrol-600));
+  border-bottom: 1px solid var(--petrol-800);
+}
+
+/* Centra el contenido del hero dentro de la medida general */
+@media (min-width: 1160px) {
+  #hero {
+    padding-inline: calc((100% - var(--measure)) / 2 + var(--gutter));
+  }
+}
+
+#hero h1 {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(3.25rem, 9.5vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+#hero h2 {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--petrol-100);
+}
+
+#hero > a {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: block;
+  align-self: center;
+  border: 1px solid rgba(244, 246, 246, 0.28);
+  padding: 0.5rem;
+  background: rgba(9, 58, 65, 0.55);
+}
+
+#hero img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- Contenido principal ---------- */
+
+main > p,
+main > section {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+main > p {
+  padding-top: 3rem;
+  font-size: 1.25rem;
+  color: var(--white);
+  max-width: calc(70ch + 2 * var(--gutter));
+  margin-inline: auto;
+}
+
+main > section {
+  padding-block: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+main > p + section {
+  border-top: 0;
+}
+
+/* ---------- About us ----------
+   Sección sin clase: es el primer <section> después del <p> de bienvenida.
+   Títulos a la izquierda, contenido en una columna de lectura a la derecha. */
+
+main > p + section {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.5fr) minmax(0, 2fr);
+  column-gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+main > p + section > h3 {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  margin-bottom: 0;
+}
+
+main > p + section > p,
+main > p + section > ul {
+  grid-column: 2;
+}
+
+/* Presentación: tamaño de lectura grande, datos clave en blanco */
+main > p + section > p:first-of-type {
+  max-width: 34ch;
+  margin-bottom: 2.5rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--text);
+}
+
+main > p + section strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Los tres redactores: una columna por persona, separadas por una línea petróleo */
+main > p + section > ul {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: 1.5rem;
+}
+
+main > p + section > ul li {
+  padding: 0.85rem 0 0;
+  border: 0;
+  border-top: 3px solid var(--petrol-400);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.05;
+  color: var(--white);
+}
+
+/* Especialidades: separadas por una línea fina, cada tema subrayado en petróleo */
+main > p + section > p:last-of-type {
+  max-width: 52ch;
+  margin-bottom: 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  line-height: 2;
+}
+
+main > p + section > p:last-of-type em {
+  font-style: normal;
+  color: var(--white);
+  padding-bottom: 0.1em;
+  border-bottom: 2px solid var(--petrol-500);
+}
+
+/* ---------- Galería de imágenes ---------- */
+main > section.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+main > section.gallery > h3 {
+  grid-column: 1 / -1;
+  margin-bottom: 0.5rem;
+}
+
+main > section.gallery figure {
+  min-width: 0;
+  margin: 0;
+  padding: 0.65rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--petrol-400);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+main > section.gallery figure:hover {
+  transform: translateY(-4px);
+  border-color: var(--petrol-300);
+  background: #222b2e;
+}
+
+main > section.gallery figure img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: saturate(0.82);
+  transition: filter 180ms ease;
+}
+
+main > section.gallery figure:hover img { filter: saturate(1); }
+
+main > section.gallery figcaption {
+  padding: 0.85rem 0.35rem 0.25rem;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* ---------- Contact Us ---------- */
+main > section.form {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.5fr) minmax(0, 2fr);
+  column-gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 48px, rgba(244, 246, 246, 0.025) 48px 49px),
+    var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+main > section.form > h3 { grid-column: 1; margin-bottom: 0; }
+
+main > section.form > form {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1rem;
+  max-width: 680px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: rgba(21, 25, 27, 0.72);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--petrol-400);
+}
+
+main > section.form label {
+  align-self: end;
+  color: var(--petrol-100);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+main > section.form input,
+main > section.form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  color: var(--white);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+main > section.form input::placeholder,
+main > section.form textarea::placeholder { color: var(--muted); }
+
+main > section.form input:focus,
+main > section.form textarea:focus {
+  outline: none;
+  border-color: var(--petrol-300);
+  background: #192124;
+}
+
+main > section.form label[for="message"],
+main > section.form #message,
+main > section.form button { grid-column: 1 / -1; }
+
+main > section.form textarea { min-height: 150px; resize: vertical; }
+main > section.form form p { display: none; }
+
+main > section.form button {
+  justify-self: start;
+  margin-top: 0.5rem;
+  padding: 0.8rem 2rem;
+  color: var(--white);
+  background: var(--petrol-600);
+  border: 1px solid var(--petrol-400);
+  border-radius: 0;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+main > section.form button:hover {
+  background: var(--petrol-500);
+  border-color: var(--petrol-300);
+  transform: translateY(-2px);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+  padding: 1.5rem var(--gutter);
   text-align: center;
-  padding: 0px ;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+footer h4 { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Adaptación a pantallas pequeñas ---------- */
+@media (max-width: 760px) {
+  main > section.gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main > section.form { grid-template-columns: 1fr; row-gap: 1.5rem; }
+  main > section.form > h3,
+  main > section.form > form { grid-column: 1; }
 }
 
-.form{
-  background-color:grey;
+@media (max-width: 520px) {
+  #navbar { gap: 1.1rem; justify-content: space-between; }
+  #navbar a { font-size: 0.85rem; }
+  main > section.gallery { grid-template-columns: 1fr; }
+  main > section.form > form { grid-template-columns: 1fr; }
+  main > section.form label,
+  main > section.form input,
+  main > section.form textarea,
+  main > section.form button { grid-column: 1; }
 }
 
-.petrolcompanylist{
-  background-color: grey;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- About us: editorial two-column layout ---------- */
+main > section:first-of-type {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.5fr) minmax(0, 2fr);
+  column-gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+main > section:first-of-type > h3 {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  margin: 0;
+}
+
+main > section:first-of-type > p,
+main > section:first-of-type > ul {
+  grid-column: 2;
+}
+
+main > section:first-of-type > p:first-of-type {
+  max-width: 40ch;
+  margin: 0 0 2.5rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--text);
+}
+
+main > section:first-of-type strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+main > section:first-of-type > ul {
+  list-style: none;
+  max-width: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+main > section:first-of-type > ul li {
+  min-width: 0;
+  padding: 0.85rem 0 0;
+  border: 0;
+  border-top: 3px solid var(--petrol-400);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  line-height: 1.05;
+  color: var(--white);
+}
+
+main > section:first-of-type > p:last-of-type {
+  max-width: 52ch;
+  margin: 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  line-height: 2;
+}
+
+main > section:first-of-type > p:last-of-type em {
+  font-style: normal;
+  color: var(--white);
+  padding-bottom: 0.1em;
+  border-bottom: 2px solid var(--petrol-500);
+}
+
+@media (max-width: 650px) {
+  main > section:first-of-type {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  main > section:first-of-type > h3,
+  main > section:first-of-type > p,
+  main > section:first-of-type > ul {
+    grid-column: 1;
+  }
+
+  main > section:first-of-type > h3 {
+    grid-row: auto;
+  }
+
+  main > section:first-of-type > p:first-of-type {
+    margin-bottom: 0.5rem;
+  }
+
+  main > section:first-of-type > ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ==========================================================
+   PETROL COMPANY INDEX · Industrial editorial redesign
+   HTML stays unchanged: .list, its image and ordered list.
+   ========================================================== */
+
+main > section.list {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.82fr) minmax(0, 1.18fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.5rem, 4vw, 3.5rem);
+  row-gap: 1.6rem;
+  align-items: stretch;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  background:
+    linear-gradient(115deg, rgba(19, 118, 132, 0.11), transparent 48%),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(244, 246, 246, 0.025) 79px 80px),
+    var(--bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+main > section.list::before {
+  content: "EIN / FIELD REPORT  —  2026";
+  grid-column: 1 / -1;
+  display: block;
+  padding-bottom: 0.8rem;
+  color: var(--petrol-300);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+main > section.list > h4 {
+  grid-column: 1 / -1;
+  max-width: 22ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4.1rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+main > section.list > h4::after {
+  content: "";
+  display: block;
+  width: clamp(4rem, 10vw, 8rem);
+  height: 4px;
+  margin-top: 1.2rem;
+  background: var(--petrol-400);
+}
+
+main > section.list > img {
+  grid-column: 1;
+  grid-row: 3;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  max-height: 520px;
+  object-fit: cover;
+  filter: grayscale(0.55) contrast(1.12) brightness(0.78);
+  border: 1px solid var(--line);
+  outline: 1px solid rgba(99, 185, 192, 0.35);
+  outline-offset: 6px;
+  transition: filter 300ms ease, transform 500ms ease;
+}
+
+main > section.list:hover > img {
+  filter: grayscale(0.15) contrast(1.08) brightness(0.9);
+  transform: scale(1.015);
+}
+
+main > section.list > .petrolcompanylist {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: company;
+  border-top: 1px solid var(--line);
+}
+
+main > section.list > .petrolcompanylist::before {
+  content: "COMPANY DIRECTORY  /  ARGENTINA";
+  display: block;
+  padding: 0.9rem 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+main > section.list > .petrolcompanylist li {
+  counter-increment: company;
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  align-items: center;
+  min-height: 76px;
+  padding: 0.65rem 0.85rem 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+main > section.list > .petrolcompanylist li::before {
+  content: "0" counter(company);
+  color: var(--petrol-400);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+main > section.list > .petrolcompanylist li::after {
+  content: "↗";
+  color: var(--muted);
+  font-size: 1.15rem;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+main > section.list > .petrolcompanylist a {
+  display: block;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+main > section.list > .petrolcompanylist li:hover {
+  padding-left: 0.8rem;
+  background: linear-gradient(90deg, rgba(19, 118, 132, 0.2), transparent);
+  border-bottom-color: var(--petrol-400);
+}
+
+main > section.list > .petrolcompanylist li:hover::after {
+  color: var(--petrol-300);
+  transform: translate(3px, -3px);
+}
+
+main > section.list > .petrolcompanylist li:hover a {
+  color: var(--petrol-100);
+}
+
+@media (max-width: 680px) {
+  main > section.list {
+    grid-template-columns: 1fr;
+    row-gap: 1.4rem;
+  }
+
+  main > section.list::before,
+  main > section.list > h4,
+  main > section.list > img,
+  main > section.list > .petrolcompanylist {
+    grid-column: 1;
+  }
+
+  main > section.list > img {
+    grid-row: auto;
+    min-height: 220px;
+    max-height: 300px;
+  }
+
+  main > section.list > .petrolcompanylist {
+    grid-row: auto;
+  }
 }

@@ -1,9 +1,7 @@
 /* Editá esta lista: [materia, título, descripción, autores, enlace, imagen (opcional)]
    Para la miniatura poné la ruta de la imagen en el último campo, por ejemplo "img/arte.jpg". */
 const P=[
-["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EnergyIntelligenceNetwork.png"],
-["Recipes","Mimi Cooks","Here you'll find delicious salty and sweet recipes from around the world.","Sofia DiVirgilio, Emilia Petracchi, Milagros Apeceche","./proyects/MimiCooks/index.html","thumbnails/MimiCooks.png"],
-["Sports","The evolution of football jerseys","This sport's blog wanders over the evolution of football jerseys.","Francisco Oliva, etc","./proyects/FootballJerseys/index.html","thumbnails/FootballJerseys.png"],
+["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EIN.png"],
 ["Arte","Muralismo mexicano","Rivera, Orozco y Siqueiros: el arte que salió a la calle.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Impresionismo","La luz, el color y el instante, explicados con obras clave.","Nombre Apellido, Nombre Apellido","#",""],
 ["Geografía","Placas tectónicas","Cómo se mueven los continentes y por qué tiembla la Tierra.","Nombre Apellido, Nombre Apellido","#",""],

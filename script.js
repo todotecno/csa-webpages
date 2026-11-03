@@ -1,7 +1,7 @@
 /* Editá esta lista: [materia, título, descripción, autores, enlace, imagen (opcional)]
    Para la miniatura poné la ruta de la imagen en el último campo, por ejemplo "img/arte.jpg". */
 const P=[
-["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EIN.png"],
+["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks about the oil industry in Argentina.","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EIN.png"],
 ["Arte","Muralismo mexicano","Rivera, Orozco y Siqueiros: el arte que salió a la calle.","Nombre Apellido, Nombre Apellido","#",""],
 ["Arte","Impresionismo","La luz, el color y el instante, explicados con obras clave.","Nombre Apellido, Nombre Apellido","#",""],
 ["Geografía","Placas tectónicas","Cómo se mueven los continentes y por qué tiembla la Tierra.","Nombre Apellido, Nombre Apellido","#",""],

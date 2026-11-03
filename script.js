@@ -2,7 +2,7 @@
    Para la miniatura poné la ruta de la imagen en el último campo, por ejemplo "img/arte.jpg". */
 const P=[
 ["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks about the oil industry in Argentina.","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EIN.png"],
-["Cooking","Flavours of Buenos Aires","Rivera, Orozco y Siqueiros: el arte que salió a la calle.","Juan Martín Lozano, Alejo Tamborini","./proyects/FlavoursBSAS/index.html","thumbnails/FlavoursBSAS.png"],
+["Cooking","Flavours of Buenos Aires","A website that goes through the best restaurants in Buenos Aires.","Juan Martín Lozano, Alejo Tamborini","./proyects/FlavoursBSAS/index.html","thumbnails/FlavoursBSAS.png"],
 ["Newspaper","Impresionismo","La luz, el color y el instante, explicados con obras clave.","Nombre Apellido, Nombre Apellido","#",""],
 ["Cooking","Placas tectónicas","Cómo se mueven los continentes y por qué tiembla la Tierra.","Nombre Apellido, Nombre Apellido","#",""],
 ["Football","Mapa interactivo de la Argentina","Provincias, regiones y capitales para explorar con un clic.","Nombre Apellido, Nombre Apellido","#",""],

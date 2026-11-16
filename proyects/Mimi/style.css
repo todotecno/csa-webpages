@@ -1,0 +1,534 @@
+html {
+  height: 100%;
+  background: 50% 50% no-repeat
+    url('data:image/svg+xml,<svg viewBox="-20 -5 60 40" width="140" xmlns="http://www.w3.org/2000/svg" opacity="0.2"><path d="M1 8l11-7 11 7v8l-11 7-11-7zm0 0l11 8 11-8m0 8L12 8 1 16M12 1v7m0 8v7" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/><text x="-12" y="32" font-size="5" font-family="monospace" fill="currentColor">Built on CodePen</text></svg>');
+}
+ p{
+  color:green;
+  font-family:times new roman;
+}
+h1{
+  background-color:pink;
+  font-family:Times New Roman;
+  
+}
+ footer{
+  background-color:pink;
+}
+#mybackgroundcolorbox placeholder{
+  font-family:times new roman;
+}
+h3{
+  background-color:pink;
+  }
+
+
+.items{
+  display: flex;
+  list-style:none
+  justify-content: space-between;
+  gap: 2rem;
+
+
+}
+
+
+/* GENERAL SETTINGS */
+
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff5f8;
+  color: #171717;
+}
+
+
+/* HEADER */
+
+
+header {
+  background-color: #f4b6ca;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.logo h1 {
+  font-size: 35px;
+  letter-spacing: 3px;
+  color: #171717;
+}
+
+
+.logo h2 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/* NAVIGATION */
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #171717;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+nav a:hover {
+  color: white;
+}
+
+
+/* HERO SECTION */
+
+
+#hero {
+  height: 450px;
+
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600");
+
+
+  background-size: cover;
+  background-position: center;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+  color: white;
+  padding: 30px;
+}
+
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+
+.hero-content p {
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+
+/* BUTTON */
+
+
+.button {
+  display: inline-block;
+  background-color: #f4b6ca;
+  color: #171717;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.button:hover {
+  background-color: #171717;
+  color: white;
+}
+
+
+/* ABOUT SECTION */
+
+
+#about {
+  background-color: #fff5f8;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+
+#about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+
+#about p {
+  max-width: 750px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+
+#about h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+
+#about ul {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+
+#about li {
+  padding-left: 5px;
+}
+
+
+/* ABOUT IMAGE */
+
+
+.about-image {
+  display: block;
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 4px solid #f4b6ca;
+  transition: 0.3s;
+}
+
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+
+@media (max-width: 700px) {
+
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  nav ul {
+    justify-content: center;
+    gap: 15px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+
+  #hero {
+    height: 400px;
+  }
+
+
+  #about {
+    padding: 40px 7%;
+  }
+}
+
+
+/* 4. DETAILED FEATURE SECTION */
+
+
+#features {
+  background-color: #fff0f5;
+  padding: 60px 8%;
+  text-align: center;
+}
+
+
+#features h2,
+#gallery h2,
+#contact h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 35px;
+}
+
+
+.recipe-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.recipe-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+
+.recipe-card h3 {
+  color: #bd6484;
+  margin-bottom: 10px;
+}
+
+
+.recipe-card h4 {
+  margin: 18px 0 10px;
+}
+
+
+.recipe-card ol,
+.recipe-card ul {
+  padding-left: 25px;
+  line-height: 1.9;
+}
+
+
+.recipe-card a {
+  color: #bd6484;
+  font-weight: bold;
+}
+
+
+.recipe-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f4b6ca;
+  color: black !important;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+
+
+
+/* 5. GALLERY SECTION */
+
+
+#gallery {
+  background-color: white;
+  padding: 60px 8%;
+  text-align: center;
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+
+.gallery-card {
+  background-color: #fff0f5;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  transition: 0.3s;
+}
+
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.gallery-card h3 {
+  margin: 15px 5px 5px;
+  color: #bd6484;
+}
+
+
+.gallery-card p {
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+
+
+
+/* 6. CONTACT FORM */
+
+
+#contact {
+  background-color: #f4b6ca;
+  padding: 60px 8%;
+  text-align: center;
+}
+
+
+#contact form {
+  background-color: white;
+  max-width: 550px;
+  margin: 30px auto 0;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+
+#contact label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e4a5ba;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+
+#contact textarea {
+  resize: vertical;
+}
+
+
+#contact button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border: none;
+  border-radius: 25px;
+  background-color: #171717;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+#contact button:hover {
+  background-color: #bd6484;
+}
+
+
+
+
+/* 7. FOOTER */
+
+
+footer {
+  background-color: #171717;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+
+footer h2 {
+  color: #f4b6ca;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+
+.creators {
+  list-style: none;
+  margin: 15px 0;
+  line-height: 2;
+}
+
+
+footer a {
+  color: #f4b6ca;
+}
+
+
+.copyright {
+  border-top: 1px solid #555;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 13px;
+}
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+
+@media (max-width: 700px) {
+
+
+  .recipe-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+}
+
+
+@media (max-width: 450px) {
+
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+}

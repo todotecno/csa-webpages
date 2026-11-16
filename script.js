@@ -6,7 +6,7 @@ const P=[
 ["Cooking","Polka Desserts","The best recipies for polka desserts.","Julia Cafaro, Antonia Perez, Guillermina Ruffa","./proyects/polka/index.html",""],
 ["Cooking","Mimi Cooks","Original family recipies.","Emilia Petracchi, Milagros Apeceche, Sofia Di Virgilio","./proyects/Mimi/index.html",""],
 ["Rugby","Rugby History","The whole history of los Pumas.","Juan Patricio Gilligan, Francisco Ocampo","./proyects/RHistory/index.html",""],
-["Cooking","Recipe Book","A recipie book.","Alma Di Giacinti, Victoria Nerome, Josefina Parodi","./proyects/Recipe",""],
+["Cooking","Recipe Book","A recipie book.","Alma Di Giacinti, Victoria Nerome, Josefina Parodi","./proyects/Recipe/index.html",""],
 ["Football","The evolution of football jerseys","It goes over the history of argentinian football jerseys.","Francisco Oliva, Salvador Lorenzi, Lucio Lopez","./proyects/FJHistory/index.html",""],
 ["Clothing","Create the best outfits","Different ideas and tips for outfit combination.","Mora Perez Simoes, Pia Amui","./proyects/Outfits/index.html",""],
 ["Clothing","Inspo4you","Different clothing inspiration for your outfits.","Ungo Juana, Flores Delfina","./proyects/I4Y/index.html",""],

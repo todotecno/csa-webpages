@@ -1,0 +1,610 @@
+
+
+/* ---------- FONTS ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+
+/* ---------- COLORS ---------- */
+
+:root {
+  --cream: #fffaf3;
+  --beige: #f2e5d5;
+  --pink: #e8bfc0;
+  --pink-dark: #bd8588;
+  --brown: #654b40;
+  --chocolate: #49352e;
+  --white: #ffffff;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  scroll-margin-top: 20px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+  min-height: 450px;
+  margin: 20px;
+  padding: 28px 40px;
+
+  background:
+    linear-gradient(
+      rgba(65, 43, 35, 0.45),
+      rgba(65, 43, 35, 0.55)
+    ),
+    url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=85');
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 25px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 30px rgba(73, 53, 46, 0.15);
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: auto;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 9px 19px;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: white;
+  color: var(--brown);
+  transform: translateY(-4px);
+}
+
+
+/* ---------- HEADER CONTENT ---------- */
+
+.header-content {
+  text-align: center;
+  max-width: 750px;
+  margin: 75px auto 45px;
+}
+
+.tagline,
+.small-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--pink-dark);
+}
+
+header .tagline {
+  color: #f5d9d3;
+  margin-bottom: 18px;
+}
+
+header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(25px, 4vw, 38px);
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 28px;
+}
+
+.header-button {
+  display: inline-block;
+  padding: 12px 26px;
+  background: var(--cream);
+  color: var(--brown);
+  border-radius: 30px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.header-button:hover {
+  background: var(--pink);
+  color: white;
+  transform: scale(1.08);
+}
+
+
+/* ---------- MAIN ---------- */
+
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+
+/* ---------- INTRODUCTION AND TITLE ---------- */
+
+.intro {
+  text-align: center;
+  padding: 55px 10px 35px;
+}
+
+.intro .small-title {
+  margin-bottom: 15px;
+}
+
+#myMainTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 7vw, 76px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #9b6260;
+  margin-bottom: 18px;
+  text-shadow: 2px 3px 8px rgba(155, 98, 96, 0.15);
+}
+
+#myMainTitle em {
+  color: #c58b83;
+  font-style: italic;
+}
+
+.intro-text {
+  color: #92796b;
+  font-size: 16px;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.card {
+  background: var(--white);
+  margin: 30px 0;
+  padding: 40px;
+  border-radius: 22px;
+  border: 1px solid #f0e4d9;
+
+  box-shadow: 0 8px 25px rgba(73, 53, 46, 0.07);
+
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 14px 35px rgba(73, 53, 46, 0.12);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading .small-title {
+  margin-bottom: 8px;
+}
+
+.section-heading h2,
+.newsletter h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: var(--chocolate);
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #947f72;
+}
+
+
+/* ---------- FEATURED RECIPES ---------- */
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recipe-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 25px;
+  background: #fff7f0;
+  border: 1px solid #ead8cc;
+  border-radius: 18px;
+  transition: all 0.35s ease;
+}
+
+.recipe-item:hover {
+  background: #f6e5df;
+  transform: translateX(10px);
+  box-shadow: 0 12px 25px rgba(100, 65, 55, 0.15);
+}
+
+.recipe-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--pink-dark);
+}
+
+.recipe-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: #765044;
+  margin-bottom: 8px;
+}
+
+.recipe-content p {
+  color: #92796b;
+  margin-bottom: 15px;
+}
+
+.recipe-link {
+  display: inline-block;
+  color: #a96367;
+  font-weight: 700;
+  border-bottom: 2px solid #d9a5a0;
+  padding-bottom: 3px;
+  transition: all 0.3s ease;
+}
+
+.recipe-link:hover {
+  color: #654036;
+  letter-spacing: 1px;
+  padding-left: 8px;
+}
+
+
+/* ---------- MORE BUTTON ---------- */
+
+.more-container {
+  text-align: center;
+  margin-top: 38px;
+}
+
+.more-container p {
+  color: #927d70;
+  margin-bottom: 17px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 17px 38px;
+
+  background: linear-gradient(135deg, #bd8588, #8e5559);
+  color: white;
+
+  border: 2px solid #f3d4cf;
+  border-radius: 50px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  box-shadow: 0 8px 0 #75464a,
+              0 13px 25px rgba(100, 55, 55, 0.25);
+
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.button span {
+  font-size: 24px;
+  transition: transform 0.35s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #704348, #a35f65);
+  transform: translateY(-8px) scale(1.08);
+
+  box-shadow: 0 12px 0 #4e3033,
+              0 20px 35px rgba(100, 55, 55, 0.35);
+}
+
+.button:hover span {
+  transform: translateX(10px) scale(1.2);
+}
+
+.button:active {
+  transform: translateY(4px) scale(0.97);
+  box-shadow: 0 3px 0 #75464a;
+}
+
+
+/* ---------- GALLERY ---------- */
+
+.gallery-section {
+  padding: 35px 0;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+
+  padding: 25px;
+  background: var(--beige);
+  border-radius: 22px;
+}
+
+.images img {
+  width: 280px;
+  max-width: 100%;
+  height: 210px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  border: 5px solid white;
+
+  box-shadow: 0 7px 18px rgba(73, 53, 46, 0.12);
+
+  transition: all 0.4s ease;
+}
+
+.images img:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 12px 25px rgba(73, 53, 46, 0.2);
+}
+
+.images2 {
+  background: #f3ded9;
+  margin: 25px 0;
+}
+
+
+/* ---------- COOKIES ---------- */
+
+.cookies-card {
+  border-top: 6px solid var(--pink);
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 13px 10px 13px 55px;
+  border-bottom: 1px solid #f1e6dd;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 10px;
+
+  width: 36px;
+  height: 36px;
+
+  background: var(--pink);
+  color: var(--chocolate);
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+
+/* ---------- NEWSLETTER ---------- */
+
+.newsletter {
+  text-align: center;
+  background: #f8eee8;
+}
+
+.newsletter h2 {
+  margin: 10px 0;
+}
+
+.newsletter > p:not(.small-title) {
+  color: #927d70;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+  margin: 25px auto 0;
+  text-align: left;
+}
+
+label {
+  font-weight: 700;
+  color: var(--brown);
+}
+
+input {
+  padding: 13px 15px;
+  border: 1px solid #e4d2c6;
+  border-radius: 12px;
+  background: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--pink-dark);
+  box-shadow: 0 0 0 3px rgba(189, 133, 136, 0.12);
+}
+
+form button {
+  margin-top: 12px;
+  padding: 13px;
+  background: var(--pink-dark);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: var(--chocolate);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px rgba(73, 53, 46, 0.2);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  background: var(--chocolate);
+  color: #fff8f2;
+  text-align: center;
+
+  padding: 32px 20px;
+  margin: 40px 20px 20px;
+  border-radius: 20px;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+footer a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #e8bfc0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+  header {
+    margin: 10px;
+    padding: 22px 15px;
+    min-height: 500px;
+  }
+
+  .header-top {
+    gap: 18px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .header-content {
+    margin: 65px auto 35px;
+  }
+
+  .card {
+    padding: 23px 17px;
+  }
+
+  .section-heading h2,
+  .newsletter h2 {
+    font-size: 28px;
+  }
+
+  .recipe-item {
+    gap: 13px;
+    padding: 17px 12px;
+  }
+
+  .recipe-item h3 {
+    font-size: 19px;
+  }
+
+  .images img {
+    width: 100%;
+  }
+
+  .button {
+    padding: 13px 23px;
+    font-size: 14px;
+  }
+
+  #myMainTitle {
+    font-size: 45px;
+  }
+
+}

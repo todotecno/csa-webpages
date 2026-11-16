@@ -1,0 +1,297 @@
+/* Import vintage serif & clean body fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@500;600&display=swap');
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fcf8f2; /* Soft vintage parchment cream */
+  color: #5c4b43;
+  overflow-x: hidden;
+}
+
+/* --- Top Banner --- */
+.top-banner {
+  background-color: #f4c2c2; /* Muted vintage pastel pink */
+  color: #724c4c;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e6b1b1;
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #b56576; /* Dusty vintage rose */
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #8c7368;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #b56576;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  max-width: 750px;
+  margin: 50px auto 100px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Floating Flowers Decoration */
+.flower {
+  position: absolute;
+  font-size: 2rem;
+  color: #e5989b; /* Dusty rose */
+  opacity: 0.7;
+  animation: float 4s ease-in-out infinite;
+}
+
+.flower-one {
+  top: -10px;
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.flower-two {
+  top: 30px;
+  right: 12%;
+  color: #f4acb7; /* Soft blush pink */
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(12deg); }
+}
+
+/* Eyebrow text */
+.eyebrow {
+  display: inline-block;
+  background-color: #faedcd; /* Warm cream/butter tone */
+  color: #b08968;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+  border: 1px solid #e9d8a6;
+}
+
+/* Headings & Text */
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #4a3b32;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  font-style: italic;
+  color: #b56576; /* Dusty rose accent */
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  color: #8c7368;
+  max-width: 480px;
+  margin: 0 auto 32px auto;
+  line-height: 1.7;
+}
+
+/* Call to Action Button */
+.button {
+  display: inline-block;
+  background-color: #e5989b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(229, 152, 155, 0.35);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #b56576;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(181, 101, 118, 0.4);
+}
+/* --- Top Banner --- */
+.top-banner {
+  background-color: #f4c2c2; /* Muted vintage pastel pink */
+  color: #724c4c;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e6b1b1;
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #b56576; /* Dusty vintage rose */
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #8c7368;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #b56576;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  max-width: 750px;
+  margin: 50px auto 100px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Floating Flowers Decoration */
+.flower {
+  position: absolute;
+  font-size: 2rem;
+  color: #e5989b; /* Dusty rose */
+  opacity: 0.7;
+  animation: float 4s ease-in-out infinite;
+}
+
+.flower-one {
+  top: -10px;
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.flower-two {
+  top: 30px;
+  right: 12%;
+  color: #f4acb7; /* Soft blush pink */
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(12deg); }
+}
+
+/* Eyebrow text */
+.eyebrow {
+  display: inline-block;
+  background-color: #faedcd; /* Warm cream/butter tone */
+  color: #b08968;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+  border: 1px solid #e9d8a6;
+}
+
+/* Headings & Text */
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #4a3b32;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  font-style: italic;
+  color: #b56576; /* Dusty rose accent for vintage flair */
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  color: #8c7368;
+  max-width: 480px;
+  margin: 0 auto 32px auto;
+  line-height: 1.7;
+}
+
+/* Call to Action Button */
+.button {
+  display: inline-block;
+  background-color: #e5989b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(229, 152, 155, 0.35);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #b56576;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(181, 101, 118, 0.4);
+}

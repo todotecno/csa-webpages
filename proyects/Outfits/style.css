@@ -1,0 +1,1831 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #F8F3E9;
+}
+
+/* =========================
+   MAIN HEADER
+========================= */
+
+.hero-header {
+  min-height: 680px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+
+  background:
+    radial-gradient(circle at 15% 15%, #ffffffa0, transparent 30%),
+    radial-gradient(circle at 90% 85%, #a9bec0, transparent 35%),
+    linear-gradient(135deg, #e9ddc9, #c6d4d1, #e4d5c3);
+
+  background-size: 200% 200%;
+  animation: oceanMove 12s ease infinite;
+}
+
+@keyframes oceanMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================
+   GLASS CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+
+  padding: 35px 65px;
+  text-align: center;
+
+  background: rgba(248, 243, 233, 0.68);
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 12px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 20px 60px #183b5020;
+
+  animation:
+    appear 1.2s ease forwards,
+    cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* SHIMMER EFFECT */
+
+.hero-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    #ffffff35 45%,
+    transparent 70%
+  );
+
+  background-size: 250% 250%;
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 150% 50%;
+  }
+
+  50% {
+    background-position: -50% 50%;
+  }
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+
+  margin-bottom: 65px;
+}
+
+.hero-nav a {
+  position: relative;
+  overflow: hidden;
+
+  text-decoration: none;
+  color: #183B50;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  padding: 11px 23px;
+  border-radius: 30px;
+
+  background: #ffffffa6;
+  border: 1px solid #ffffff;
+
+  transition: all 0.35s ease;
+}
+
+.hero-nav a span {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.hero-nav a::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: #ffffff70;
+  transform: skewX(-25deg);
+
+  transition: left 0.5s ease;
+}
+
+.hero-nav a:hover::before {
+  left: 120%;
+}
+
+.hero-nav a:hover {
+  transform: translateY(-5px);
+  background: #183B50;
+  color: #F8F3E9;
+
+  box-shadow: 0 8px 20px #183b5030;
+}
+
+.hero-nav a:hover span {
+  animation: iconBounce 0.5s ease;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(15deg);
+  }
+}
+
+/* =========================
+   SMALL LABEL
+========================= */
+
+.hero-label {
+  display: inline-block;
+
+  color: #762F43;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+
+  animation: labelAppear 1s ease both;
+}
+
+@keyframes labelAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.bubble-title {
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.15;
+
+  color: #183B50;
+  font-weight: 700;
+
+  animation: titleReveal 1.4s ease both;
+}
+
+.bubble-title span {
+  display: block;
+
+  font-style: italic;
+  color: #762F43;
+
+  text-shadow: 2px 3px 0 #ffffff80;
+
+  animation: titleColor 5s ease infinite alternate;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes titleColor {
+  from {
+    color: #762F43;
+  }
+
+  to {
+    color: #A66B78;
+  }
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.bubble-subtitle {
+  margin-top: 20px;
+
+  color: #718A8B;
+  font-size: 19px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  animation: subtitleAppear 1.8s ease both;
+}
+
+.bubble-subtitle span {
+  color: #762F43;
+}
+
+@keyframes subtitleAppear {
+  from {
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 3px;
+  }
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 540px;
+
+  margin: 25px auto 30px;
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  color: #657579;
+
+  animation: descriptionAppear 2.2s ease both;
+}
+
+@keyframes descriptionAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MAIN BUTTON
+========================= */
+
+.hero-button {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-block;
+
+  padding: 14px 30px;
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  background: #183B50;
+  color: #F8F3E9;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  box-shadow: 0 8px 20px #183b5030;
+
+  transition: all 0.35s ease;
+
+  animation: buttonGlow 3s ease-in-out infinite;
+}
+
+.hero-button span {
+  margin-left: 8px;
+}
+
+.hero-button::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffffff80,
+    transparent
+  );
+
+  transform: skewX(-25deg);
+}
+
+.hero-button:hover::before {
+  left: 150%;
+  transition: left 0.7s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-5px);
+
+  background: #762F43;
+
+  box-shadow: 0 12px 28px #762f4350;
+
+  letter-spacing: 2px;
+}
+
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow: 0 8px 20px #183b5030;
+  }
+
+  50% {
+    box-shadow: 0 8px 30px #762f4360;
+  }
+}
+
+/* =========================
+   BOTTOM TEXT
+========================= */
+
+.hero-bottom {
+  margin-top: 45px;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  color: #762F43;
+
+  animation: fadeUp 2.5s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   FLOATING DECORATIONS
+========================= */
+
+.sparkle {
+  position: absolute;
+
+  color: #F8F3E9;
+  font-size: 40px;
+
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.sparkle-1 {
+  top: 12%;
+  left: 12%;
+
+  font-size: 45px;
+
+  animation: floatRotate 7s ease-in-out infinite;
+}
+
+.sparkle-2 {
+  top: 25%;
+  right: 13%;
+
+  color: #762F43;
+  font-size: 35px;
+
+  animation: floatSide 5s ease-in-out infinite;
+}
+
+.sparkle-3 {
+  bottom: 15%;
+  left: 17%;
+
+  color: #183B50;
+  font-size: 50px;
+
+  animation: floatRotate 8s ease-in-out infinite reverse;
+}
+
+.sparkle-4 {
+  bottom: 20%;
+  right: 12%;
+
+  color: #762F43;
+  font-size: 42px;
+
+  animation: floatSide 6s ease-in-out infinite reverse;
+}
+
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(25deg) scale(1.15);
+  }
+}
+
+@keyframes floatSide {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(12px, -20px);
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero-header {
+    min-height: 650px;
+    padding: 25px 15px;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+    min-height: 540px;
+  }
+
+  .hero-nav {
+    gap: 10px;
+    margin-bottom: 55px;
+  }
+
+  .hero-nav a {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .sparkle-1 {
+    left: 3%;
+  }
+
+  .sparkle-2 {
+    right: 3%;
+  }
+
+  .sparkle-3 {
+    left: 5%;
+  }
+
+  .sparkle-4 {
+    right: 5%;
+  }
+
+}
+
+/* =========================
+   REDUCED MOTION ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =================================
+   INSPIRATION SECTION
+================================= */
+
+.inspiration-section {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 7% 70px;
+
+  background: #F8F3E9;
+  color: #183B50;
+}
+
+/* DECORATIONS */
+
+.section-decoration {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+  animation: decorationFloat 6s ease-in-out infinite;
+}
+
+.deco-one {
+  top: 10%;
+  right: 9%;
+  font-size: 55px;
+  color: #762F43;
+}
+
+.deco-two {
+  top: 45%;
+  left: 4%;
+  font-size: 45px;
+  color: #718A8B;
+  animation-delay: 1s;
+}
+
+.deco-three {
+  bottom: 8%;
+  right: 8%;
+  font-size: 50px;
+  color: #183B50;
+  animation-delay: 2s;
+}
+
+@keyframes decorationFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(15deg);
+  }
+}
+
+/* =================================
+   SECTION TITLES
+================================= */
+
+.ideas-container,
+.brands-section {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-label {
+  color: #762F43;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 55px);
+  line-height: 1.2;
+  color: #183B50;
+}
+
+.section-title span {
+  display: block;
+  font-style: italic;
+  color: #762F43;
+}
+
+.section-description {
+  max-width: 520px;
+  margin: 20px auto 45px;
+
+  font-size: 14px;
+  line-height: 1.9;
+  color: #718A8B;
+}
+
+/* =================================
+   PINTEREST CARD
+================================= */
+
+.pinterest-card {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 850px;
+  min-height: 310px;
+  margin: 50px auto 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+
+  padding: 55px 65px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #183B50,
+      #31596A,
+      #718A8B
+    );
+
+  border-radius: 8px;
+
+  box-shadow: 0 20px 45px #183B5025;
+
+  transition: transform 0.5s ease,
+              box-shadow 0.5s ease;
+
+  animation: cardEntrance 1s ease both;
+}
+
+.pinterest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 55px #183B5035;
+}
+
+.pinterest-content {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+
+.card-number {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #D8C8B2;
+}
+
+.pinterest-content h3 {
+  margin-top: 25px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 43px);
+
+  color: #F8F3E9;
+  line-height: 1.2;
+}
+
+.pinterest-content h3 span {
+  display: block;
+  color: #E5C7C1;
+  font-style: italic;
+}
+
+.pinterest-content p {
+  margin-top: 18px;
+  margin-bottom: 25px;
+
+  color: #E3E3DC;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.pinterest-button {
+  display: inline-block;
+
+  text-decoration: none;
+  color: #183B50;
+  background: #E9DDC9;
+
+  padding: 13px 25px;
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: all 0.4s ease;
+}
+
+.pinterest-button:hover {
+  background: #762F43;
+  color: white;
+  transform: translateY(-5px);
+  letter-spacing: 1px;
+}
+
+/* DECORATIVE SYMBOLS */
+
+.pinterest-decoration {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+
+  width: 220px;
+  height: 220px;
+
+  border: 1px solid #ffffff40;
+  border-radius: 50%;
+  animation: slowRotate 20s linear infinite;
+}
+
+.pinterest-decoration span {
+  position: absolute;
+  font-size: 45px;
+  color: #E9DDC9;
+}
+
+.pinterest-decoration span:nth-child(1) {
+  top: -20px;
+  left: 85px;
+}
+
+.pinterest-decoration span:nth-child(2) {
+  right: -15px;
+  top: 85px;
+  color: #E5C7C1;
+}
+
+.pinterest-decoration span:nth-child(3) {
+  bottom: -15px;
+  left: 85px;
+}
+
+@keyframes slowRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================
+   BRANDS SECTION
+================================= */
+
+.brands-section {
+  padding-top: 20px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin-top: 55px;
+}
+
+/* BRAND CARDS */
+
+.brand-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 185px;
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  text-decoration: none;
+
+  background: #EFE5D5;
+  border: 1px solid #E1D3C0;
+  border-radius: 5px;
+
+  text-align: left;
+
+  transition: all 0.45s cubic-bezier(.2,.8,.2,1);
+
+  animation: cardEntrance 0.9s ease both;
+}
+
+/* DIFFERENT CARD COLORS */
+
+.brand-card:nth-child(3n + 2) {
+  background: #E4E9E4;
+  border-color: #CFD9D3;
+}
+
+.brand-card:nth-child(3n) {
+  background: #EBDDE0;
+  border-color: #DDC5CB;
+}
+
+/* CARD INDEX */
+
+.brand-index {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #9C8580;
+  margin-bottom: 20px;
+}
+
+/* BRAND NAME */
+
+.brand-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 700;
+  color: #183B50;
+
+  transition: all 0.4s ease;
+}
+
+/* BRAND CATEGORY */
+
+.brand-category {
+  margin-top: 12px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #927A76;
+
+  transition: all 0.4s ease;
+}
+
+/* ARROW */
+
+.brand-arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+
+  font-size: 22px;
+  color: #762F43;
+
+  transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+
+.brand-card::before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: -100%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    #ffffff70,
+    transparent
+  );
+
+  transition: left 0.7s ease;
+}
+
+.brand-card:hover::before {
+  left: 100%;
+}
+
+.brand-card:hover {
+  transform: translateY(-10px) scale(1.025);
+  background: #183B50;
+
+  box-shadow: 0 18px 35px #183B5025;
+}
+
+.brand-card:hover h3 {
+  color: #F8F3E9;
+  transform: translateX(5px);
+}
+
+.brand-card:hover .brand-index,
+.brand-card:hover .brand-category {
+  color: #D8C8B2;
+}
+
+.brand-card:hover .brand-arrow {
+  color: #E5C7C1;
+  transform: translate(5px, -5px);
+}
+
+/* =================================
+   ENTRANCE ANIMATIONS
+================================= */
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   ENDING
+================================= */
+
+.section-ending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  margin: 110px auto 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  color: #762F43;
+  text-align: center;
+}
+
+.section-ending span {
+  color: #183B50;
+  font-size: 20px;
+  animation: endingSparkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes endingSparkle {
+  from {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 750px) {
+
+  .inspiration-section {
+    padding: 80px 20px 50px;
+  }
+
+  .pinterest-card {
+    padding: 40px 30px;
+    min-height: 330px;
+  }
+
+  .pinterest-decoration {
+    opacity: 0.25;
+    right: -40px;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .brand-card {
+    min-height: 160px;
+    padding: 20px 15px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-card {
+    min-height: 135px;
+  }
+
+  .section-ending {
+    font-size: 8px;
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   GALLERY SECTION
+===================================== */
+
+.gallery-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 110px 7% 80px;
+
+  background: #E9DDC9;
+  color: #183B50;
+}
+
+
+/* =====================================
+   GALLERY HEADING
+===================================== */
+
+.gallery-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 65px;
+
+  animation: galleryAppear 1.2s ease both;
+}
+
+.gallery-eyebrow {
+  display: inline-block;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+
+  color: #762F43;
+
+  margin-bottom: 22px;
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(40px, 6vw, 65px);
+  line-height: 1.1;
+
+  color: #183B50;
+}
+
+.gallery-title span {
+  display: block;
+
+  font-style: italic;
+  color: #762F43;
+}
+
+.gallery-description {
+  max-width: 500px;
+  margin: 25px auto;
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  color: #718A8B;
+}
+
+.gallery-divider {
+  margin-top: 35px;
+
+  color: #762F43;
+  font-size: 14px;
+  letter-spacing: 5px;
+
+  animation: dividerGlow 3s ease-in-out infinite alternate;
+}
+
+
+/* =====================================
+   GALLERY GRID
+===================================== */
+
+.outfit-gallery {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: 280px;
+
+  gap: 20px;
+}
+
+
+/* =====================================
+   IMAGE CARDS
+===================================== */
+
+.outfit-item {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+  border: 5px solid #F8F3E9;
+
+  background: #183B50;
+
+  box-shadow: 0 8px 25px #183B5020;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.6s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.6s ease;
+
+  animation: galleryAppear 1s ease both;
+}
+
+
+/* DIFFERENT IMAGE SIZES */
+
+.item-1 {
+  grid-row: span 2;
+  animation-delay: .1s;
+}
+
+.item-2 {
+  animation-delay: .2s;
+}
+
+.item-3 {
+  animation-delay: .3s;
+}
+
+.item-4 {
+  grid-row: span 2;
+  animation-delay: .4s;
+}
+
+.item-5 {
+  animation-delay: .5s;
+}
+
+.item-6 {
+  animation-delay: .6s;
+}
+
+.item-7 {
+  animation-delay: .7s;
+}
+
+.item-8 {
+  animation-delay: .8s;
+}
+
+.item-9 {
+  animation-delay: .9s;
+}
+
+
+/* IMAGE SETTINGS */
+
+.outfit-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.9s cubic-bezier(.2,.8,.2,1),
+    filter 0.7s ease;
+}
+
+
+/* =====================================
+   HOVER OVERLAY
+===================================== */
+
+.outfit-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    to top,
+    #183B50dd,
+    #183B5030,
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.6s ease;
+}
+
+.outfit-overlay span {
+  color: #E9DDC9;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  transform: translateY(20px);
+
+  transition: transform 0.5s ease;
+}
+
+.outfit-overlay h3 {
+  margin-top: 15px;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 25px;
+  font-style: italic;
+
+  color: #F8F3E9;
+
+  transform: translateY(25px);
+
+  transition: transform 0.6s ease;
+}
+
+.outfit-overlay p {
+  margin-top: 15px;
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: #E9DDC9;
+
+  transform: translateY(20px);
+
+  transition: transform 0.7s ease;
+}
+
+
+/* =====================================
+   IMAGE HOVER ANIMATIONS
+===================================== */
+
+.outfit-item:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow: 0 20px 40px #183B5035;
+
+  z-index: 3;
+}
+
+.outfit-item:hover img {
+  transform: scale(1.12);
+
+  filter: brightness(0.75);
+}
+
+.outfit-item:hover .outfit-overlay {
+  opacity: 1;
+}
+
+.outfit-item:hover .outfit-overlay span,
+.outfit-item:hover .outfit-overlay h3,
+.outfit-item:hover .outfit-overlay p {
+  transform: translateY(0);
+}
+
+
+/* =====================================
+   GALLERY FOOTER
+===================================== */
+
+.gallery-footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 90px;
+
+  text-align: center;
+
+  color: #762F43;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.gallery-footer span {
+  font-size: 22px;
+
+  animation: starPulse 2s ease-in-out infinite alternate;
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes galleryAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dividerGlow {
+  from {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes starPulse {
+  from {
+    opacity: .4;
+    transform: rotate(0deg) scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(20deg) scale(1.2);
+  }
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 800px) {
+
+  .outfit-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+
+  .item-1,
+  .item-4 {
+    grid-row: span 2;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 500px) {
+
+  .gallery-section {
+    padding: 75px 18px 55px;
+  }
+
+  .outfit-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 190px;
+    gap: 10px;
+  }
+
+  .item-1,
+  .item-4 {
+    grid-row: span 2;
+  }
+
+  .outfit-item {
+    border-width: 3px;
+  }
+
+  .outfit-overlay h3 {
+    font-size: 16px;
+  }
+
+  .outfit-overlay p {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .gallery-footer {
+    font-size: 8px;
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-section *,
+  .gallery-section *::before,
+  .gallery-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* ✧ CONTACT SECTION ✧ */
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
+  text-align: center;
+  background: #F8F3E9;
+  color: #183B50;
+}
+
+.contact-decoration {
+  position: absolute;
+  top: 35px;
+  right: 12%;
+  font-size: 65px;
+  color: #762F43;
+  opacity: 0.3;
+  animation: contactStar 7s ease-in-out infinite;
+}
+
+.contact-label {
+  color: #762F43;
+  letter-spacing: 5px;
+  font-size: 11px;
+  animation: contactFade 1s ease both;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 70px);
+  margin: 15px 0;
+  animation: contactTitle 1.2s ease both;
+  transition: letter-spacing 0.5s ease;
+}
+
+.contact-title:hover {
+  letter-spacing: 5px;
+}
+
+.contact-description {
+  max-width: 450px;
+  margin: 0 auto 40px;
+  color: #718A8B;
+  line-height: 1.8;
+}
+
+.contact-form {
+  width: min(100%, 480px);
+  margin: auto;
+  padding: 35px;
+  text-align: left;
+  background: #E9DDC9;
+  border: 1px solid rgba(118, 47, 67, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 15px 40px rgba(24, 59, 80, 0.1);
+  animation: formAppear 1.2s ease both;
+}
+
+.form-group {
+  margin-bottom: 23px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #762F43;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid rgba(24, 59, 80, 0.25);
+  border-radius: 3px;
+  background: #F8F3E9;
+  color: #183B50;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.4s ease, box-shadow 0.4s ease,
+              transform 0.4s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #762F43;
+  box-shadow: 0 0 0 4px rgba(118, 47, 67, 0.1);
+  transform: translateY(-3px);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #183B50;
+  color: #F8F3E9;
+  font-family: inherit;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+.contact-button:hover {
+  background: #762F43;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(118, 47, 67, 0.2);
+}
+
+.contact-note {
+  margin-top: 35px;
+  color: #762F43;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* ✧ FOOTER ✧ */
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 65px 20px 30px;
+  text-align: center;
+  color: #F8F3E9;
+  background: #183B50;
+}
+
+.footer-star {
+  color: #E9DDC9;
+  font-size: 40px;
+  animation: contactStar 5s ease-in-out infinite;
+}
+
+.footer-title {
+  margin: 15px 0 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  animation: footerReveal 1s ease both;
+}
+
+.footer-subtitle {
+  margin-top: 5px;
+  color: #D9C6B1;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+.footer-line {
+  width: 70px;
+  height: 1px;
+  margin: 30px auto;
+  background: #D9C6B1;
+  animation: lineExpand 1.5s ease both;
+}
+
+.footer-creators {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.footer-year,
+.footer-contact {
+  color: #D9C6B1;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-bottom {
+  margin-top: 35px;
+  color: #E9DDC9;
+  font-size: 23px;
+  letter-spacing: 8px;
+  animation: footerTwinkle 3s ease-in-out infinite;
+}
+
+/* ✧ FOOTER ANIMATIONS ✧ */
+
+@keyframes contactStar {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(25deg) translateY(-12px);
+  }
+}
+
+@keyframes contactFade {
+  from {
+    opacity: 0;
+    letter-spacing: 12px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 5px;
+  }
+}
+
+@keyframes contactTitle {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes footerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineExpand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes footerTwinkle {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+/* ✧ RESPONSIVE ✧ */
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 70px 18px;
+  }
+
+  .contact-form {
+    padding: 23px;
+  }
+
+  .footer-title {
+    font-size: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-section *,
+  .site-footer * {
+    animation: none !important;
+    transition: none !important;
+  }
+ 
+}

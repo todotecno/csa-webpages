@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create the Best Outfits</title>
+  </head>
+  
+  <style>
+  .back-home{
+    position:fixed; left:clamp(16px,3vw,32px); bottom:clamp(16px,3vw,32px); z-index:1000;
+    display:flex; align-items:center; gap:10px; height:48px; padding:0 20px 0 16px;
+    background:var(--text,#D6FF1F); color:var(--ink,#0B2418); text-decoration:none;
+    font-family:var(--font-display,'Bebas Neue',Impact,sans-serif); font-size:1.35rem; letter-spacing:.02em;
+    transition:translate .3s cubic-bezier(.16,1,.3,1), scale .2s;
+  }
+  .back-home svg{width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:translate .3s cubic-bezier(.16,1,.3,1);}
+  .back-home:hover{translate:0 -4px;}
+  .back-home:hover svg{translate:-4px 0;}
+  .back-home:active{scale:.96;}
+  .back-home:focus-visible{outline:3px solid var(--amber,#f0a93a); outline-offset:3px;}
+  @media (max-width:600px){ .back-home span{display:none;} .back-home{width:48px; padding:0; justify-content:center;} }
+  @media (prefers-reduced-motion:reduce){ .back-home,.back-home svg{transition:none;} }
+</style>
+
+  <body>
+
+<a class="back-home" href="../../index.html" aria-label="Volver al inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span>Home</span>
+    </a>
+
+<header class="hero-header">
+  <section class="hero-content">
+    <nav class="hero-nav">
+      <a href="https://es-d-22863263120260922-01a057e6-898d-78af-b356-180cea275645.codepen.dev"><span>𑄝੭</span> Home</a>
+      <a href="https://www.google.com/search?q=000-000-000"><span>🕻</span> Contact Us!</a>
+      <a href="tel:000000000"> <span>☎</span> Call Us!</a>
+      <a href="https://www.vogue.com/fashion" target="_blank" rel="noopener noreferrer"><span>✧</span> Fashion Magazines</a>
+      <a href="https://thephotostudio.com.au/modelling/the-most-famous-models-all-time/" target="_blank" rel="noopener noreferrer"><span>☆</span> Fashion Icons</a>
+</nav>
+    </nav>
+
+    <h1 class="bubble-title">To create the best outfits!</h1>
+
+    <h2 class="bubble-subtitle">outfits ideas ✮⋆˙</h2>
+
+    <p class="hero-description">
+      This page will be meant to give ideas of outfits specially for girls by the moment. In the future when we get to work more on it we will upgrade it!!
+    </p>
+  </section>
+</header>
+    
+   <main class="inspiration-section" id="outfits">
+
+  <!-- DECORATIONS -->
+  <div class="section-decoration deco-one">✧</div>
+  <div class="section-decoration deco-two">♡</div>
+  <div class="section-decoration deco-three">✦</div>
+
+  <!-- INTRODUCTION -->
+  <section class="ideas-container">
+
+    <div class="section-label">
+      ✿ FIND YOUR STYLE ✿
+    </div>
+
+    <h2 class="section-title">
+      A little bit of
+      <span>inspiration...</span>
+    </h2>
+
+    <p class="section-description">
+      Discover new combinations, explore different styles
+      and find inspiration for your next favorite outfit.
+    </p>
+
+    <!-- PINTEREST CARD -->
+    <div class="pinterest-card">
+
+      <div class="pinterest-content">
+        <span class="card-number">01 / INSPIRATION</span>
+
+        <h3>
+          Your next outfit
+          <span>starts here.</span>
+        </h3>
+
+        <p>
+          Explore our Pinterest board for outfit ideas,
+          fashion inspiration and cute combinations!
+        </p>
+
+        <a
+          href="https://ar.pinterest.com/amui0423/trabajo-tecnologia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pinterest-button"
+        >
+          Explore Pinterest ↗
+        </a>
+      </div>
+
+      <div class="pinterest-decoration">
+        <span>✧</span>
+        <span>♡</span>
+        <span>୨୧</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BRANDS SECTION -->
+  <section class="brands-section">
+
+    <div class="section-label">
+      ✿ THE FASHION EDIT ✿
+    </div>
+
+    <h2 class="section-title">
+      Some of our
+      <span>favorites...</span>
+    </h2>
+
+    <p class="section-description">
+      A little collection of brands we love.
+      Find your next fashion inspiration!
+    </p>
+
+    <div class="brands-grid">
+
+      <a href="https://www.zara.com/ar/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">01</span>
+        <h3>ZARA</h3>
+        <span class="brand-category">MODERN ESSENTIALS</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.nike.com.ar/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">02</span>
+        <h3>NIKE</h3>
+        <span class="brand-category">SPORTY STYLE</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.pullandbear.com/?select-store=true"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">03</span>
+        <h3>PULL&BEAR</h3>
+        <span class="brand-category">CASUAL LOOKS</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.levi.com.ar/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">04</span>
+        <h3>LEVI'S</h3>
+        <span class="brand-category">DENIM CLASSICS</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.lovelydenim.com.ar/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">05</span>
+        <h3>LOVELY DENIM</h3>
+        <span class="brand-category">DENIM LOVE</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://ar.tommy.com/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">06</span>
+        <h3>TOMMY HILFIGER</h3>
+        <span class="brand-category">TIMELESS STYLE</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.calvinklein.ar"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">07</span>
+        <h3>CALVIN KLEIN</h3>
+        <span class="brand-category">MINIMAL FASHION</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.uniqlo.com/es/es/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">08</span>
+        <h3>UNIQLO</h3>
+        <span class="brand-category">EVERYDAY BASICS</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+      <a href="https://www.guess.com/en-us/guess/women"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="brand-card">
+        <span class="brand-index">09</span>
+        <h3>GUESS</h3>
+        <span class="brand-category">FASHION DETAILS</span>
+        <span class="brand-arrow">↗</span>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ENDING -->
+  <div class="section-ending">
+    <span>✧</span>
+    DRESS LIKE YOURSELF. ALWAYS.
+    <span>✧</span>
+  </div>
+
+</main>
+            
+ <section class="gallery-section" id="gallery">
+
+  <div class="gallery-heading">
+
+    <span class="gallery-eyebrow">
+      ✧ THE STYLE COLLECTION ✧
+    </span>
+
+    <h2 class="gallery-title">
+      Our gallery
+      <span>of ideas!</span>
+    </h2>
+
+    <p class="gallery-description">
+      A collection of outfits, little details and
+      inspiration to help you find your own style.
+    </p>
+
+    <div class="gallery-divider">
+      ───── ✧ ─────
+    </div>
+
+  </div>
+
+
+  <div class="outfit-gallery">
+
+    <!-- OUTFIT 01 -->
+    <a href="https://www.pullandbear.com/?select-store=true"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-1">
+
+      <img
+        src="https://static.pullandbear.net/assets/public/a250/cbe1/68554317ba96/e8ad001a9b2d/07720357800-M/07720357800-M.jpg?ts=1788445038816&w=650&f=auto"
+        alt="Pull and Bear outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 01</span>
+        <h3>Casual inspiration</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 02 -->
+    <a href="https://www.pullandbear.com/?select-store=true"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-2">
+
+      <img
+        src="https://static.pullandbear.net/assets/public/fd7d/e1c9/ffdb4f4b9082/e2f049ccce5c/1_DESKTOP/1_DESKTOP.jpg?ts=1788524332809&w=1067&f=auto"
+        alt="Pull and Bear outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 02</span>
+        <h3>Everyday looks</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 03 -->
+    <a href="https://www.nike.com.ar/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-3">
+
+      <img
+        src="https://nikearprod.vtexassets.com/arquivos/ids/1864376-600-600?v=639191246397030000&width=600&height=600&aspect=true"
+        alt="Nike outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 03</span>
+        <h3>Sporty mood</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 04 -->
+    <a href="https://shop.mango.com/es/es"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-4">
+
+      <img
+        src="https://media.mango.com/is/image/punto/37075865-56-101?wid=368&hei=515&fit=crop"
+        alt="Mango outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 04</span>
+        <h3>Elegant essentials</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 05 -->
+    <a href="https://www.bershka.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-5">
+
+      <img
+        src="https://static.pxlecdn.com/photos/796685287/original/2e7310be98d7a8c11d75.jpg"
+        alt="Bershka outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 05</span>
+        <h3>Street style</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 06 -->
+    <a href="https://www.cuestablanca.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-6">
+
+      <img
+        src="https://cuestablanca.vtexassets.com/arquivos/ids/659538-800-auto?v=639229313854430000&width=800&height=auto&aspect=true"
+        alt="Cuesta Blanca outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 06</span>
+        <h3>Soft elegance</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 07 -->
+    <a href="https://markova.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-7">
+
+      <img
+        src="https://markova.powcdn.com/uploads/picture/image/87712/jn280az_1_1785420728.jpg"
+        alt="Markova outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 07</span>
+        <h3>Classic outfits</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 08 -->
+    <a href="https://www.zara.com/ar/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-8">
+
+      <img
+        src="https://static.zara.net/assets/public/ae4a/2a3e/5f7e4930849b/988cb4a7f374/03666098807-p/03666098807-p.jpg?ts=1787149926394&w=684"
+        alt="Zara outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 08</span>
+        <h3>Minimal fashion</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+
+    <!-- OUTFIT 09 -->
+    <a href="https://www2.hm.com/es_es/index.html"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="outfit-item item-9">
+
+      <img
+        src="https://image.hm.com/assets/hm/30/71/3071c2057a05c5a80a4383b5e8388539c69ca336.jpg?imwidth=384"
+        alt="H&M outfit">
+
+      <div class="outfit-overlay">
+        <span>✧ 09</span>
+        <h3>Daily favorites</h3>
+        <p>DISCOVER LOOK ↗</p>
+      </div>
+
+    </a>
+
+  </div>
+
+
+  <div class="gallery-footer">
+    <span>✧</span>
+    FIND YOUR STYLE. CREATE YOUR STORY.
+    <span>✧</span>
+  </div>
+
+<section class="contact-section" id="contact">
+  <div class="contact-decoration">✧</div>
+
+  <p class="contact-label">✧ LET'S KEEP IN TOUCH ✧</p>
+  <h2 class="contact-title">Contact Us!</h2>
+
+  <p class="contact-description">
+    Have questions, ideas or suggestions?
+    We'd love to hear from you!
+  </p>
+
+  <form class="contact-form">
+    <div class="form-group">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name"
+             placeholder="Write your name..." required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email"
+             placeholder="Write your email..." required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Your message</label>
+      <textarea id="message" name="message"
+                placeholder="Tell us something..." rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="contact-button">
+      Send a message ✧
+    </button>
+  </form>
+
+  <p class="contact-note">✧ Thank you for visiting our little fashion corner ✧</p>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-star">✧</div>
+
+  <h2 class="footer-title">Find your style.</h2>
+  <p class="footer-subtitle">Create your story.</p>
+
+  <div class="footer-line"></div>
+
+  <p class="footer-creators">
+    Website created by Maria Pia Amui & Mora Perez
+  </p>
+
+  <p class="footer-year">© 2026 · All rights reserved</p>
+
+  <p class="footer-contact">
+    Contact us · 000-000-000
+  </p>
+
+  <div class="footer-bottom">✧ ⋆ ˚｡⋆୨୧˚ ✧</div>
+</footer>

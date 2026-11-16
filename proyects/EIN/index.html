@@ -9,7 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Energy Intelligence Network</title>
   </head>
+
+<style>
+  .back-home{
+    position:fixed; left:clamp(16px,3vw,32px); bottom:clamp(16px,3vw,32px); z-index:1000;
+    display:flex; align-items:center; gap:10px; height:48px; padding:0 20px 0 16px;
+    background:var(--text,#D6FF1F); color:var(--ink,#0B2418); text-decoration:none;
+    font-family:var(--font-display,'Bebas Neue',Impact,sans-serif); font-size:1.35rem; letter-spacing:.02em;
+    transition:translate .3s cubic-bezier(.16,1,.3,1), scale .2s;
+  }
+  .back-home svg{width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:translate .3s cubic-bezier(.16,1,.3,1);}
+  .back-home:hover{translate:0 -4px;}
+  .back-home:hover svg{translate:-4px 0;}
+  .back-home:active{scale:.96;}
+  .back-home:focus-visible{outline:3px solid var(--amber,#f0a93a); outline-offset:3px;}
+  @media (max-width:600px){ .back-home span{display:none;} .back-home{width:48px; padding:0; justify-content:center;} }
+  @media (prefers-reduced-motion:reduce){ .back-home,.back-home svg{transition:none;} }
+</style>
+
   <body>
+
+    <a class="back-home" href="../../index.html" aria-label="Volver al inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span>Home</span>
+    </a>
+
     <header>
       <nav>
         <ul id="navbar">

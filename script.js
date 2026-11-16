@@ -3,28 +3,15 @@
 const P=[
 ["Newspaper","ENERGY INTELLIGENCE NETWORK","A newspaper that talks about the oil industry in Argentina.","Mariano Villares, Juan Ignacio Cernadas, Felipe Varela","./proyects/EIN/index.html","thumbnails/EIN.png"],
 ["Cooking","Flavours of Buenos Aires","A website that goes through the best restaurants in Buenos Aires.","Juan Martín Lozano, Alejo Tamborini","./proyects/FlavoursBSAS/index.html","thumbnails/FlavoursBSAS.png"],
-["Newspaper","Impresionismo","La luz, el color y el instante, explicados con obras clave.","Nombre Apellido, Nombre Apellido","#",""],
-["Cooking","Placas tectónicas","Cómo se mueven los continentes y por qué tiembla la Tierra.","Nombre Apellido, Nombre Apellido","#",""],
-["Football","Mapa interactivo de la Argentina","Provincias, regiones y capitales para explorar con un clic.","Nombre Apellido, Nombre Apellido","#",""],
-["Cooking","Cuencas hídricas","Los grandes ríos de Sudamérica y las comunidades que viven de ellos.","Nombre Apellido, Nombre Apellido","#",""],
-["Clothing","Clima de Sudamérica","Zonas climáticas, vientos y corrientes en un solo mapa.","Nombre Apellido, Nombre Apellido","#",""],
-["Clothing","Biomas del mundo","Desiertos, selvas y tundras: dónde están y quién los habita.","Nombre Apellido, Nombre Apellido","#",""],
-["Football","Leptospirosis en Sudamérica","Mapas con datos epidemiológicos reales y cómo prevenirla.","Nombre Apellido, Nombre Apellido","#",""],
-["Rugby","Alimentación saludable","Qué comemos, qué necesitamos y cómo leer una etiqueta.","Nombre Apellido, Nombre Apellido","#",""],
-["Football","Prevención del dengue","Cómo se transmite y qué podemos hacer en casa y en el barrio.","Nombre Apellido, Nombre Apellido","#",""],
-["Basketball","Salud mental adolescente","Información clara y dónde pedir ayuda.","Nombre Apellido, Nombre Apellido","#",""],
-["Cooking","Primeros auxilios","Qué hacer en los primeros minutos de una emergencia.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","La Constitución Nacional","Derechos, garantías y cómo se organiza el Estado.","Nombre Apellido, Nombre Apellido","#",""],
-["Sociales","Derechos humanos","Su historia en la Argentina y por qué siguen importando.","Nombre Apellido, Nombre Apellido","#",""],
-["Sociales","Migraciones","Por qué las personas se mueven y cómo se formó nuestra sociedad.","Nombre Apellido, Nombre Apellido","#",""],
-["Sociales","Psicología: ¿psicólogo o psiquiatra?","Las diferencias entre ambas profesiones, con diálogos y actividades.","Nombre Apellido, Nombre Apellido","#",""],
-["Sociales","Encuesta del colegio","Qué piensa la escuela, con tablas y gráficos de los resultados.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","Tecno Formación","Educación tecnológica para poblaciones vulnerables.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","Programación para principiantes","Primeros pasos para escribir tu primera página web.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","Estadística con datos reales","Tablas de frecuencia y gráficos para entender los números.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","Un servidor casero","Cómo convertir una notebook vieja en un servidor propio.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","Videos en 360°","Cómo se graba y se arma un recorrido que se mira girando.","Nombre Apellido, Nombre Apellido","#",""],
-["Technology","Robótica educativa","Cómo armar un robot y programarlo para que haga cosas.","Nombre Apellido, Nombre Apellido","#",""]
+["Cooking","Polka Desserts","The best recipies for polka desserts.","Julia Cafaro, Antonia Perez, Guillermina Ruffa","./proyects/polka/index.html",""],
+["Cooking","Mimi Cooks","Original family recipies.","Emilia Petracchi, Milagros Apeceche, Sofia Di Virgilio","./proyects/Mimi/index.html",""],
+["Rugby","Rugby History","The whole history of los Pumas.","Juan Patricio Gilligan, Francisco Ocampo","./proyects/RHistory/index.html",""],
+["Cooking","Recipe Book","A recipie book.","Alma Di Giacinti, Victoria Nerome, Josefina Parodi","./proyects/Recipe/index.html",""],
+["Football","The evolution of football jerseys","It goes over the history of argentinian football jerseys.","Francisco Oliva, Salvador Lorenzi, Lucio Lopez","./proyects/FJHistory/index.html",""],
+["Clothing","Create the best outfits","Different ideas and tips for outfit combination.","Mora Perez Simoes, Pia Amui","./proyects/Outfits/index.html",""],
+["Clothing","Inspo4you","Different clothing inspiration for your outfits.","Ungo Juana, Flores Delfina","./proyects/I4Y/index.html",""],
+["Newspaper","Dazed and Confused","A newspaper about music, fashion and art.","Jacinta Gros, Josefina Kroll","./proyects/DaC/index.html",""],
+["Football","Prevención del dengue","Cómo se transmite y qué podemos hacer en casa y en el barrio.","Nombre Apellido, Nombre Apellido","#",""]
 ];
 const grid=document.getElementById('grid'),fil=document.getElementById('filters'),cnt=document.getElementById('count');
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

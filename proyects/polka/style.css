@@ -1,0 +1,822 @@
+/* Import a romantic, elegant serif font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500&display=swap');
+/* Header Styling */
+.coquette-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--white);
+  border-bottom: 3px dashed var(--blush-pink);
+  box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo & Bow Wrapper */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* Pretty Subtitle Badge for the Hero Banner */
+.hero-subtitle-badge {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; /* Makes it much bigger and prominent */
+  font-weight: 600;
+  font-style: italic;
+  color: var(--deep-rose);
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.5);
+  display: inline-block;
+  border-bottom: 2px dashed var(--blush-pink);
+  padding-bottom: 4px;
+}
+
+.bow {
+  font-size: 1.5rem;
+  animation: floatBow 3s ease-in-out infinite;
+}
+
+/* Improved, Bigger, Pretty Title */
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; /* Made significantly bigger */
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-color);
+  margin: 0;
+  letter-spacing: 0.8px;
+  text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.4); /* Soft pinkish glow */
+  transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+  transform: scale(1.02);
+}
+
+/* Navigation Links */
+.coquette-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.coquette-header nav ul li a {
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.coquette-header nav ul li a:hover {
+  background-color: var(--bg-pink);
+  color: var(--deep-rose);
+  transform: translateY(-2px);
+}
+
+/* Float animation for the bow */
+@keyframes floatBow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-6deg); }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .coquette-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .logo-text {
+    font-size: 1.8rem; /* Scales nicely on mobile */
+  }
+  
+  .coquette-header nav ul {
+    gap: 15px;
+  }
+}
+
+:root {
+  --bg-pink: #fff0f3;
+  --blush-pink: #ffccd5;
+  --deep-rose: #c9184a;
+  --text-color: #590d22;
+  --white: #ffffff;
+}
+
+/* Reset & Body styling for preview context */
+body {
+  margin: 0;
+  background-color: var(--bg-pink);
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Header Styling */
+.coquette-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background-color: var(--white);
+  /* Soft pastel border with a lace/scallop visual feel */
+  border-bottom: 3px dashed var(--blush-pink);
+  box-shadow: 0 4px 20px rgba(255, 182, 193, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo & Bow */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bow {
+  font-size: 1.2rem;
+  animation: floatBow 3s ease-in-out infinite;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-color);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+.coquette-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.coquette-header nav ul li a {
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effect: Soft pastel pill background */
+.coquette-header nav ul li a:hover {
+  background-color: var(--bg-pink);
+  color: var(--deep-rose);
+  transform: translateY(-2px);
+}
+
+/* Subtle floating animation for the bow */
+@keyframes floatBow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-5deg); }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .coquette-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .coquette-header nav ul {
+    gap: 15px;
+  }
+}
+/* Hero Section Styling */
+.coquette-hero {
+  /* Soft pink gradient background layered with a subtle polka dot pattern */
+  background: linear-gradient(135deg, rgba(255, 240, 243, 0.9), rgba(255, 204, 213, 0.8)), 
+              radial-gradient(var(--blush-pink) 15%, transparent 16%);
+  background-size: 100% 100%, 20px 20px; /* Creates the polka dot grid effect */
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px dashed var(--blush-pink);
+}
+
+/* Content Box with a Soft Glassmorphism / Frosted Lace Card Look */
+.hero-content {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 50px 40px;
+  border-radius: 30px;
+  border: 2px solid var(--blush-pink);
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(201, 24, 74, 0.08);
+}
+
+/* Sparkle icon accent */
+.sparkle {
+  font-size: 2rem;
+  display: inline-block;
+  animation: sparkleBounce 2s ease-in-out infinite;
+  margin-bottom: 10px;
+}
+
+/* Hero Title */
+.coquette-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size.size: 2.8rem;
+  color: var(--text-color);
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+/* Hero Description */
+.coquette-hero p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin: 0 0 25px 0;
+  line-height: 1.6;
+}
+
+/* Coquette Call-to-Action Button */
+.hero-btn {
+  display: inline-block;
+  background-color: var(--deep-rose);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(201, 24, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: var(--text-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(89, 13, 34, 0.3);
+}
+
+/* Sparkle animation */
+@keyframes sparkleBounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(15deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .coquette-hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero-content {
+    padding: 30px 20px;
+  }
+}
+/* About / Recipe Section Styling */
+.coquette-about {
+  background-color: var(--bg-pink);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px dashed var(--blush-pink);
+}
+
+/* Recipe Card Container */
+.recipe-card {
+  background: var(--white);
+  padding: 40px 50px;
+  border-radius: 35px;
+  border: 2px dashed var(--blush-pink);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Symbol Accent */
+.story-symbol {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--deep-rose);
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+.recipe-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: var(--text-color);
+  margin: 0 0 5px 0;
+  font-style: italic;
+}
+
+.recipe-card h5 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: var(--deep-rose);
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.recipe-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid var(--blush-pink);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Ingredient List Style */
+.recipe-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+}
+
+.recipe-card ul li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background-color: var(--bg-pink);
+  border-radius: 15px;
+  transition: transform 0.2s ease;
+  position: relative;
+  padding-left: 35px;
+}
+
+/* Add a dainty symbol bullet point */
+.recipe-card ul li::before {
+  content: "+";
+  position: absolute;
+  left: 15px;
+  color: var(--deep-rose);
+  font-weight: bold;
+}
+
+.recipe-card ul li:hover {
+  transform: translateX(5px);
+  background-color: var(--blush-pink);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recipe-card {
+    padding: 30px 20px;
+  }
+  .recipe-card h2 {
+    font-size: 1.9rem;
+  }
+}
+/* Instructions Section Styling */
+.coquette-instructions {
+  background-color: var(--bg-pink);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px dashed var(--blush-pink);
+}
+
+/* Instructions Card Container */
+.instructions-card {
+  background: var(--white);
+  padding: 50px;
+  border-radius: 35px;
+  border: 2px dashed var(--blush-pink);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+  max-width: 650px;
+  width: 100%;
+}
+
+/* Section Title */
+.instructions-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0 0 25px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Ordered List Styling */
+.instructions-card ol {
+  list-style: none; /* Remove default numbering to use custom styled ones */
+  padding: 0;
+  margin: 0 0 30px 0;
+  counter-reset: step-counter;
+}
+
+.instructions-card ol li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.98rem;
+  color: var(--text-color);
+  padding: 15px 15px 15px 50px;
+  margin-bottom: 12px;
+  background-color: var(--bg-pink);
+  border-radius: 15px;
+  position: relative;
+  line-height: 1.6;
+  counter-increment: step-counter;
+  transition: transform 0.2s ease;
+}
+
+/* Custom Dainty Number Badges */
+.instructions-card ol li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--blush-pink);
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.instructions-card ol li:hover {
+  transform: translateX(5px);
+  background-color: var(--blush-pink);
+}
+
+/* External Link Button */
+.link-container {
+  text-align: center;
+}
+
+.recipe-link {
+  display: inline-block;
+  background-color: var(--deep-rose);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(201, 24, 74, 0.2);
+  transition: all 0.3s ease;
+}
+
+.recipe-link:hover {
+  background-color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .instructions-card {
+    padding: 30px 20px;
+  }
+}
+/* Gallery Section Styling */
+.coquette-gallery {
+  background: linear-gradient(135deg, rgba(255, 240, 243, 0.9), rgba(255, 204, 213, 0.5));
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px dashed var(--blush-pink);
+}
+
+.gallery-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: var(--text-color);
+  margin: 0 0 40px 0;
+  font-style: italic;
+}
+/* Styling for Chicakes ordered steps */
+.recipe-card .cupcake-instructions {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  counter-reset: cupcake-counter;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+
+.recipe-card .cupcake-instructions li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  padding: 12px 12px 12px 45px;
+  margin-bottom: 8px;
+  background-color: var(--bg-pink);
+  border-radius: 15px;
+  position: relative;
+  line-height: 1.5;
+  counter-increment: cupcake-counter;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card .cupcake-instructions li::before {
+  content: counter(cupcake-counter);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--blush-pink);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.recipe-card .cupcake-instructions li:hover {
+  transform: translateX(5px);
+  background-color: var(--blush-pink);
+}
+
+/* Responsive Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Individual Gallery Card */
+.gallery-card {
+  background: var(--white);
+  padding: 20px 20px 15px 20px;
+  border-radius: 25px;
+  border: 2px dashed var(--blush-pink);
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 240px;
+  box-sizing: border-box;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(201, 24, 74, 0.15);
+}
+
+/* Image Styling inside card */
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin-bottom: 12px;
+  border: 1px solid var(--blush-pink);
+}
+
+/* Caption Styling */
+.gallery-card p {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+  }
+}
+/* Contact Section Styling */
+.coquette-contact {
+  background: var(--bg-pink);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  background: var(--white);
+  padding: 50px;
+  border-radius: 35px;
+  border: 2px dashed var(--blush-pink);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+  max-width: 550px;
+  width: 100%;
+}
+
+.contact-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: var(--text-color);
+  margin: 0 0 5px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.contact-subtitle {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: var(--deep-rose);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* Form Fields */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card label {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.contact-card input,
+.contact-card textarea {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-pink);
+  border: 1px solid var(--blush-pink);
+  padding: 12px 16px;
+  border-radius: 15px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: var(--deep-rose);
+  background-color: var(--white);
+  box-shadow: 0 0 8px rgba(201, 24, 74, 0.15);
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: var(--deep-rose);
+  color: var(--white);
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(201, 24, 74, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+/* Footer Styling */
+.coquette-footer {
+  background-color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 3px dashed var(--blush-pink);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.coquette-footer a {
+  color: var(--deep-rose);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.coquette-footer a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 30px 20px;
+  }
+}
+/* Comprehensive Footer Section Styling */
+.coquette-footer-section {
+  background: linear-gradient(135deg, rgba(255, 204, 213, 0.4), rgba(255, 240, 243, 0.9));
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px dashed var(--blush-pink);
+}
+
+.footer-card {
+  background: var(--white);
+  padding: 40px 50px;
+  border-radius: 35px;
+  border: 2px dashed var(--blush-pink);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.15);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+.footer-info {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text-color);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  margin: 8px 0;
+}
+
+.footer-instagram {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  border-top: 1px solid var(--blush-pink);
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.footer-card a {
+  color: var(--deep-rose);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-card a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-card {
+    padding: 30px 20px;
+  }
+}
